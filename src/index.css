@@ -10,7 +10,7 @@ body {
   overflow: hidden;
 }
 
-/* Pop Art Popup Container */
+
 .popup {
   background: #fff;
   border: 6px solid #000;
@@ -22,7 +22,7 @@ body {
   transition: all 0.2s ease-in-out;
 }
 
-/* Navigation - bold and comic-like */
+
 nav {
   margin-bottom: 1.5rem;
   display: flex;
@@ -47,7 +47,7 @@ nav a:hover {
   color: white;
 }
 
-/* Optional: halftone dots background on cards or popup */
+
 .popup::before {
   content: "";
   position: absolute;
@@ -62,7 +62,7 @@ nav a:hover {
   pointer-events: none;
 }
 
-/* Bring content above dots */
+
 .popup > * {
   position: relative;
   z-index: 1;

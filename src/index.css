@@ -1,0 +1,69 @@
+body {
+  margin: 0;
+  font-family: 'Comic Sans MS', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fdf04c;
+  color: #111;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Pop Art Popup Container */
+.popup {
+  background: #fff;
+  border: 6px solid #000;
+  border-radius: 12px;
+  padding: 2rem;
+  width: 90%;
+  max-width: 800px;
+  box-shadow: 10px 10px 0 #ff355e, -10px -10px 0 #00bfff;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Navigation - bold and comic-like */
+nav {
+  margin-bottom: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+nav a {
+  text-decoration: none;
+  color: #000;
+  background: #00bfff;
+  padding: 8px 16px;
+  border: 2px solid #000;
+  border-radius: 8px;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: 0.2s;
+}
+
+nav a:hover {
+  background-color: #ff355e;
+  color: white;
+}
+
+/* Optional: halftone dots background on cards or popup */
+.popup::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(#000 1px, transparent 1px);
+  background-size: 12px 12px;
+  opacity: 0.03;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Bring content above dots */
+.popup > * {
+  position: relative;
+  z-index: 1;
+}

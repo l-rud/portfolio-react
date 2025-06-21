@@ -4,7 +4,7 @@ export default function Layout() {
   return (
     <div className="popup">
       <nav>
-        <Link to="/">Home</Link>
+        {/* <Link to="/">Home</Link> */}
       </nav>
 
       <Outlet />

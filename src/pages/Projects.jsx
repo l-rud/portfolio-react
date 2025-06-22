@@ -91,7 +91,7 @@ const projects = [
 export default function Projects() {
   return (
     <div className="about-container">
-      <h1>Projects</h1>
+      <h1>My Projects</h1>
       <div className="project-grid">
         {projects.map((project, index) => (
           <div className="project-card" key={index}>

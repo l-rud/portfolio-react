@@ -1,7 +1,7 @@
 .project-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 1rem;
+  gap: 1.5rem;
   max-width: 960px;
   margin: 2rem auto;
   padding: 0 1rem;
@@ -9,30 +9,33 @@
 
 /* Card container */
 .project-card {
-  background: #fff7e6;
-  border: 2px solid #000;
-  border-radius: 10px;
-  box-shadow: 3px 3px 0 #000;
-  transition: transform 0.2s ease;
+  background: #fcefc7;
+  border: 3px solid #000;
+  border-radius: 12px;
+  box-shadow: 5px 5px 0 #00bfff;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
   padding: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  aspect-ratio: 1 / 1;
-  overflow: hidden;
+  aspect-ratio: 1 / 1;        /* square shape */
+  overflow: hidden;         
+  min-width: 0;               
 }
 
 .project-card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-6px);
+  box-shadow: 8px 8px 0 #ff355e;
+  background-color: #d4f1f9;
 }
 
 /* Project name */
 .project-link {
   text-decoration: none;
   color: #ff355e;
-  font-weight: 700;
-  font-size: 1rem;
-  margin-bottom: 0.5rem;
+  font-weight: 800;
+  font-size: 1.1rem;
+  margin-bottom: 0.75rem;
   text-align: center;
 }
 
@@ -41,14 +44,15 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 0.5rem;
+  gap: 0.4rem;
   font-size: 1.2rem;
   margin-top: auto;
   padding-top: 0.5rem;
-  border-top: 1px solid #ddd;
+  border-top: 1px solid #ccc;
+  flex-shrink: 1;
 }
 
-/* Responsiveness*/
+/* Responsiveness */
 
 /* Large tablets and small desktops */
 @media (max-width: 1024px) {
@@ -79,11 +83,14 @@
     aspect-ratio: auto;
   }
 }
+
+/* Icon hover effect */
 .tech-icons span svg {
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, transform 0.2s ease;
 }
 
 .tech-icons span:hover svg {
   color: #ff355e;
   cursor: pointer;
+  transform: scale(1.2);
 }

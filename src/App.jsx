@@ -18,7 +18,7 @@ const App = () => {
           <Route path="about" element={<About />} />
           <Route path="projects" element={<Projects />} />
           <Route path="*" element={<NotFound />} />
-        </Route>
+        </Route> 
       </Routes>
     </AnimatePresence>
   );

@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import PageWrapper from '../components/PageWrapper';
 import {
   FaHtml5,
   FaCss3Alt,
@@ -85,11 +86,17 @@ const projects = [
     name: 'Grocery List',
     path: '/projects/groceryList',
     tech: ['HTML', 'CSS', 'JavaScript'],
+  },
+  {
+    name: 'Future project',
+    path: '/projects/futureProject',
+    tech: [ '', ''],
   }
 ];
 
 export default function Projects() {
   return (
+     <PageWrapper>
     <div className="about-container">
       <h1>My Projects</h1>
       <div className="project-grid">
@@ -107,5 +114,6 @@ export default function Projects() {
         ))}
       </div>
     </div>
+    </PageWrapper>
   );
 }

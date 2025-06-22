@@ -1,5 +1,7 @@
+import PageWrapper from '../components/PageWrapper';
 export default function About() {
   return (
+     <PageWrapper>
         <div className="about-container">
           <h1>About Me</h1>
       <p>
@@ -10,5 +12,6 @@ export default function About() {
       </p>
       <p>Thanks for stopping by — feel free to take a look around!</p>   
     </div>
+    </PageWrapper>
   );
 }

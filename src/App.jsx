@@ -1,21 +1,26 @@
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
+import { AnimatePresence } from 'framer-motion';
 import Layout from './components/Layout';
 import Home from './pages/Home';
 import About from './pages/About';
 import Projects from './pages/Projects';
-import NotFound from './pages/NotFound';
-import './App.css'
+import NotFound from './pages/NotFound'; // If you have a 404
+import './App.css';
 
 const App = () => {
-   return (
-    <Routes>
-      <Route path="/" element={<Layout />}>
-        <Route index element={<Home />}/>
+  const location = useLocation();
+
+  return (
+    <AnimatePresence mode="wait">
+      <Routes location={location} key={location.pathname}>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
           <Route path="about" element={<About />} />
           <Route path="projects" element={<Projects />} />
           <Route path="*" element={<NotFound />} />
-      </Route>
-    </Routes>
+        </Route>
+      </Routes>
+    </AnimatePresence>
   );
 };
 

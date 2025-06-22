@@ -1,4 +1,4 @@
-import { Outlet, Link } from 'react-router-dom';
+import { Outlet, NavLink } from 'react-router-dom';
 
 export default function Layout() {
   return (
@@ -8,9 +8,25 @@ export default function Layout() {
       </div>
 
       <nav>
-        <Link to="/" className="pop-button">Home</Link>
-        <Link to="/about" className="pop-button">About</Link>
-        <Link to="/projects" className="pop-button">Projects</Link>
+        <NavLink
+          to="/"
+          end
+          className={({ isActive }) => isActive ? 'pop-button active' : 'pop-button'}
+        >
+          Home
+        </NavLink>
+        <NavLink
+          to="/about"
+          className={({ isActive }) => isActive ? 'pop-button active' : 'pop-button'}
+        >
+          About
+        </NavLink>
+        <NavLink
+          to="/projects"
+          className={({ isActive }) => isActive ? 'pop-button active' : 'pop-button'}
+        >
+          Projects
+        </NavLink>
       </nav>
     </div>
   );

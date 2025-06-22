@@ -48,8 +48,6 @@ nav {
   justify-content: center;
 }
 
-/* Navigation Links (optional, if uncommented) */
-/*
 nav a {
   text-decoration: none;
   color: #000;
@@ -66,7 +64,6 @@ nav a:hover {
   background-color: #ff355e;
   color: white;
 }
-*/
 
 .pop-button {
   display: inline-block;

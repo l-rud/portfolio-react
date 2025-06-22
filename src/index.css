@@ -3,11 +3,11 @@ body {
   font-family: 'Comic Sans MS', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #fdf04c;
   color: #111;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
+  overflow: auto;  /* Changed from 'hidden' to allow scrolling on mobile */
 }
 
 .popup {
@@ -19,33 +19,8 @@ body {
   max-width: 800px;
   box-shadow: 10px 10px 0 #ff355e, -10px -10px 0 #00bfff;
   transition: all 0.2s ease-in-out;
+  position: relative;
 }
-
-
-nav {
-  margin-bottom: 1.5rem;
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-}
-
-/* nav a {
-  text-decoration: none;
-  color: #000;
-  background: #00bfff;
-  padding: 8px 16px;
-  border: 2px solid #000;
-  border-radius: 8px;
-  font-weight: bold;
-  text-transform: uppercase;
-  transition: 0.2s;
-}
-
-nav a:hover {
-  background-color: #ff355e;
-  color: white;
-} */
-
 
 .popup::before {
   content: "";
@@ -61,16 +36,42 @@ nav a:hover {
   pointer-events: none;
 }
 
-
 .popup > * {
   position: relative;
   z-index: 1;
 }
+
+nav {
+  margin-bottom: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+/* Navigation Links (optional, if uncommented) */
+/*
+nav a {
+  text-decoration: none;
+  color: #000;
+  background: #00bfff;
+  padding: 8px 16px;
+  border: 2px solid #000;
+  border-radius: 8px;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: 0.2s;
+}
+
+nav a:hover {
+  background-color: #ff355e;
+  color: white;
+}
+*/
+
 .pop-button {
   display: inline-block;
-   background: #00bfff;
-    color: #000;
-  /* color: white; */
+  background: #00bfff;
+  color: #000;
   font-weight: bold;
   padding: 12px 24px;
   border: 4px solid black;
@@ -84,14 +85,28 @@ nav a:hover {
 
 .pop-button:hover {
   background-color: #ff355e;
-  color: white; 
+  color: white;
   box-shadow: 8px 8px 0 black;
   transform: translateY(-3px);
 }
+
+.home-container {
+  text-align: center;
+}
+
+.button-group {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
 .about-container {
   text-align: center;
   max-width: 700px;
   margin: 0 auto;
+  padding: 0 1rem;
 }
 
 .about-container h1 {
@@ -104,4 +119,48 @@ nav a:hover {
   font-size: 1.1rem;
   margin-bottom: 1rem;
   line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .popup {
+    padding: 1.5rem;
+    box-shadow: 5px 5px 0 #ff355e, -5px -5px 0 #00bfff;
+  }
+
+  .pop-button {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .about-container {
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .popup {
+    padding: 1rem;
+    width: 95%;
+    border-width: 4px;
+  }
+
+  .pop-button {
+    padding: 10px;
+    font-size: 0.85rem;
+  }
+
+  h1, h3 {
+    font-size: 1.2rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
 }

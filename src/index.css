@@ -10,9 +10,8 @@ body {
   overflow: hidden;
 }
 
-
 .popup {
-  background: #fff;
+  background: #fff7e6;
   border: 6px solid #000;
   border-radius: 12px;
   padding: 2rem;

@@ -154,7 +154,7 @@ nav a:hover {
   }
 }
 .pop-button.active {
-  background-color: #ff355e; /* Bright red */
+  background-color: #ff355e; 
   color: white;
   box-shadow: 6px 6px 0 black;
   transform: translateY(-2px);

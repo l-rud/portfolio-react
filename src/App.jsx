@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Projects from './pages/Projects';
 import GameCollection from './pages/projects/gameCollection'; 
+import RecipeCollection from './pages/projects/recipeCollection';
 import NotFound from './pages/NotFound'; 
 import './App.css';
 
@@ -17,11 +18,9 @@ const App = () => {
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="about" element={<About />} />
-
-          {/* Nest GameCollection inside projects */}
           <Route path="projects" element={<Projects />} />
           <Route path="projects/gameCollection" element={<GameCollection />} />
-            
+          <Route path="projects/recipeCollection" element={<RecipeCollection />} />
 
           <Route path="*" element={<NotFound />} />
         </Route>

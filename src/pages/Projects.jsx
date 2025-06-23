@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
 import PageWrapper from '../components/PageWrapper';
 import {
   FaHtml5,
@@ -90,30 +90,31 @@ const projects = [
   {
     name: 'Future project',
     path: '/projects/futureProject',
-    tech: [ '', ''],
+    tech: [],
   }
 ];
 
 export default function Projects() {
   return (
-     <PageWrapper>
-    <div className="about-container">
-      <h1>My Projects</h1>
-      <div className="project-grid">
-        {projects.map((project, index) => (
-          <div className="project-card" key={index}>
-            <Link to={project.path} className="project-link">
-              {project.name}
-            </Link>
-            <div className="tech-icons">
-              {project.tech.map((tech, i) =>
-                techIcons[tech] ? <span key={i}>{techIcons[tech]}</span> : null
-              )}
+    <PageWrapper>
+      <div className="about-container">
+        <h1>My Projects</h1>
+        <div className="project-grid">
+          {projects.map((project) => (
+            <div className="project-card" key={project.name}>
+              <Link to={project.path} className="project-link">
+                {project.name}
+              </Link>
+              <div className="tech-icons">
+                {project.tech.map((tech, i) =>
+                  techIcons[tech] ? <span key={i}>{techIcons[tech]}</span> : null
+                )}
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
+        <Outlet />
       </div>
-    </div>
     </PageWrapper>
   );
 }

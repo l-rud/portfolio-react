@@ -7,6 +7,7 @@ import Projects from './pages/Projects';
 import GameCollection from './pages/projects/gameCollection'; 
 import RecipeCollection from './pages/projects/recipeCollection';
 import FashionBlog from './pages/projects/fashionBlog';
+import Todo from './pages/projects/todo';
 import NotFound from './pages/NotFound'; 
 import './App.css';
 
@@ -22,7 +23,8 @@ const App = () => {
           <Route path="projects" element={<Projects />} />
           <Route path="projects/gameCollection" element={<GameCollection />} />
           <Route path="projects/recipeCollection" element={<RecipeCollection />} />
-           <Route path="projects/fashionBlog" element={<FashionBlog />} />
+          <Route path="projects/fashionBlog" element={<FashionBlog />} />
+           <Route path="projects/todo" element={<Todo />} />
 
           <Route path="*" element={<NotFound />} />
         </Route>

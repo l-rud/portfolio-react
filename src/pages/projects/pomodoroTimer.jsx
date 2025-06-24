@@ -2,7 +2,7 @@ import PageWrapper from '../../components/PageWrapper';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 import './singleProject.css';
 
-export default function Todo() {
+export default function PomodoroTimer() {
   return (
     <PageWrapper>
       <div className="project-detail-container">

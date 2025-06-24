@@ -2,7 +2,7 @@ import PageWrapper from '../../components/PageWrapper';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 import './singleProject.css';
 
-export default function GameCollection() {
+export default function FashionBlog() {
   return (
     <PageWrapper>
       <div className="project-detail-container">

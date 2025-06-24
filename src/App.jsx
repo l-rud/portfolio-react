@@ -13,6 +13,7 @@ import HomeLibraryCatalog from './pages/projects/homeLibraryCatalog';
 import Portfolio from './pages/projects/portfolio';
 import GroceryList from './pages/projects/groceryList';
 import PurrfectMatch from './pages/projects/purrfectMatch';
+import PurrfectMatchReact from './pages/projects/purrfectMatchReact';
 import NotFound from './pages/NotFound'; 
 import './App.css';
 
@@ -35,6 +36,7 @@ const App = () => {
           <Route path="projects/portfolio" element={<Portfolio />} />
           <Route path="projects/groceryList" element={<GroceryList />} />
           <Route path="projects/purrfectMatch" element={<PurrfectMatch />} />
+          <Route path="projects/purrfectMatchReact" element={<PurrfectMatchReact />} />
 
           <Route path="*" element={<NotFound />} />
         </Route>

@@ -12,6 +12,7 @@ import PomodoroTimer from './pages/projects/pomodoroTimer';
 import HomeLibraryCatalog from './pages/projects/homeLibraryCatalog';
 import Portfolio from './pages/projects/portfolio';
 import GroceryList from './pages/projects/groceryList';
+import PurrfectMatch from './pages/projects/purrfectMatch';
 import NotFound from './pages/NotFound'; 
 import './App.css';
 
@@ -33,6 +34,7 @@ const App = () => {
           <Route path="projects/homeLibraryCatalog" element={<HomeLibraryCatalog />} />
           <Route path="projects/portfolio" element={<Portfolio />} />
           <Route path="projects/groceryList" element={<GroceryList />} />
+          <Route path="projects/purrfectMatch" element={<PurrfectMatch />} />
 
           <Route path="*" element={<NotFound />} />
         </Route>

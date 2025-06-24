@@ -10,6 +10,7 @@ import FashionBlog from './pages/projects/fashionBlog';
 import Todo from './pages/projects/todo';
 import PomodoroTimer from './pages/projects/pomodoroTimer';
 import HomeLibraryCatalog from './pages/projects/homeLibraryCatalog';
+import Portfolio from './pages/projects/portfolio';
 import NotFound from './pages/NotFound'; 
 import './App.css';
 
@@ -29,6 +30,7 @@ const App = () => {
           <Route path="projects/todo" element={<Todo />} />
           <Route path="projects/pomodoroTimer" element={<PomodoroTimer />} />
           <Route path="projects/homeLibraryCatalog" element={<HomeLibraryCatalog />} />
+          <Route path="projects/portfolio" element={<Portfolio />} />
 
           <Route path="*" element={<NotFound />} />
         </Route>

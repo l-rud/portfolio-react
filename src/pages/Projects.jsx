@@ -77,15 +77,15 @@ const projects = [
     path: '/projects/purrfectMatch',
     tech: ['HTML', 'CSS', 'JavaScript', 'Node', 'PublicAPI'],
   },
-   {
-    name: 'Portfolio',
-    path: '/projects/portfolio',
-    tech: ['HTML', 'CSS', 'JavaScript'],
-  },
   {
     name: 'Grocery List',
     path: '/projects/groceryList',
     tech: ['HTML', 'CSS', 'JavaScript'],
+  },
+  {
+    name: 'Portfolio',
+    path: '/projects/portfolio',
+    tech: ['HTML', 'CSS'],
   },
   {
     name: 'Future project',

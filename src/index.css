@@ -133,6 +133,31 @@ nav a:hover {
   }
 }
 
+@media (max-width: 768px) {
+  .popup {
+    padding: 1.5rem;
+    box-shadow: 5px 5px 0 #ff355e, -5px -5px 0 #00bfff;
+  }
+
+  .pop-button {
+    padding: 8px 16px;
+    font-size: 0.85rem;
+    width: auto; /* Changed from 100% to ensures the button size fits the text */
+    text-align: center;
+  }
+
+  nav {
+    flex-wrap: wrap;  /* If there's not enough room in this row, move the extra buttons down */
+    justify-content: center;
+    gap: 0.5rem;
+    flex-direction: row; /* Made them inline */
+  }
+
+  .about-container {
+    padding: 0 1rem;
+  }
+}
+
 @media (max-width: 480px) {
   .popup {
     padding: 1rem;
@@ -141,8 +166,9 @@ nav a:hover {
   }
 
   .pop-button {
-    padding: 10px;
-    font-size: 0.85rem;
+    padding: 6px 12px;
+    font-size: 0.75rem;
+    width: auto; /* Changed from full width */
   }
 
   h1, h3 {
@@ -152,6 +178,7 @@ nav a:hover {
   p {
     font-size: 1rem;
   }
+
 }
 .pop-button.active {
   background-color: #ff355e; 
